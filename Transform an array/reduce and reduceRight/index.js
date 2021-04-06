@@ -48,6 +48,11 @@ arr.reduce((sum, current) => sum + current)
 // So it’s advised to always specify the initial value.
 // The method arr.reduceRight does the same, but goes from right to left.
 
+//ex:
+let arr = [1, 2, 3, 5]
+const ans = arr.reduceRight((c, current) => c - current)
+console.log(ans)
+
 // example two
 // 20 is the initial value
 let arr2 = [20, 10, 10, 5]
