@@ -4,10 +4,10 @@
 
 //The syntax is:
 
-let result = arr.find(function(item, index, array) {
-    // if true is returned, item is returned and iteration is stopped
-    // for falsy scenario returns undefined
-  });
+// let result = arr.find(function(item, index, array) {
+//     // if true is returned, item is returned and iteration is stopped
+//     // for falsy scenario returns undefined
+//   });
 
   // If it returns true, the search is stopped, the item is returned. If nothing found, undefined is returned.
 
@@ -27,3 +27,20 @@ let result = arr.find(function(item, index, array) {
 
 //The arr.findIndex method is essentially the same, but it returns the index where the element was found instead of the element itself and -1 is returned when nothing is found.
 
+// Example two
+const students = [
+  {id: 1, name: 'Patrick'},
+  {id: 2, name: 'Stico'},
+  {id: 3, name: 'BBoy'},
+  {id: 4, name: 'Pack'},
+]
+
+const student = students.find((item, index, arr) => {
+  console.log('Is item found on this index? ', item.id === 2)
+  console.log('Index: ', index)
+  console.log('Array: ', arr)
+
+  return item.id === 2
+})
+
+console.log('The found item is: ', student)
