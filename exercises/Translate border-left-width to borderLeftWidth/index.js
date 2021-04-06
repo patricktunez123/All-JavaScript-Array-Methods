@@ -12,9 +12,11 @@
 
 const camelize = (str) => {
     const res = 
-    str.split('-')
+    str.split('-') // splits 'my-long-word' into array ['my', 'long', 'word']
+    // capitalizes first letters of all array items except the first one
+    // converts ['my', 'long', 'word'] into ['my', 'Long', 'Word']
     .map((word, index) => index === 0 ? word : word[0].toUpperCase() + word.slice(1))
-    .join('')
+    .join('')  // joins ['my', 'Long', 'Word'] into 'myLongWord'
 
     console.log(res)
 }
